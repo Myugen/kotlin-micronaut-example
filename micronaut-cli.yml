@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: dev.mcabsan
+---
+testFramework: kotlintest
+sourceLanguage: kotlin
