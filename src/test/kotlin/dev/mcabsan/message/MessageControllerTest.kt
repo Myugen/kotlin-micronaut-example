@@ -9,7 +9,7 @@ import io.micronaut.http.client.annotation.Client
 import io.micronaut.test.annotation.MicronautTest
 
 @MicronautTest
-class MessageControllerTest(@Client("/") private val client: RxHttpClient) : BehaviorSpec ({
+class MessageControllerTest(@Client("/") private val client: RxHttpClient) : BehaviorSpec({
     given("the message endpoint") {
         `when`("GET /message/hello/Miguel") {
             val response: HttpResponse<String> = client.toBlocking().exchange("/message/hello/Miguel", String::class.java)
